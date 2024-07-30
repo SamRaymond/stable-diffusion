@@ -30,7 +30,7 @@ data:
     batch_size: 12
     wrap: True
     train:
-      target: ldm.data.imagenet.ImageNetSRTrain
+      target: ldm.data.imagenet.ImageNetSRValidation
       params:
         size: 256
         degradation: pil_nearest
