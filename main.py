@@ -145,7 +145,7 @@ class WrappedDataset(Dataset):
 
 def worker_init_fn(_):
     worker_info = torch.utils.data.get_worker_info()
-    worker_infor.num_workers = 256 # adding more workers
+    print("Number of workers: ",worker_infor.num_workers)
     dataset = worker_info.dataset
     worker_id = worker_info.id
 
