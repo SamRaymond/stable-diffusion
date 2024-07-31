@@ -166,10 +166,10 @@ class ImageNetTrain(ImageNetBase):
             datadir = self.datadir
             if not os.path.exists(datadir):
                 path = os.path.join(self.root, self.FILES[0])
-                if not os.path.exists(path) or not os.path.getsize(path)==self.SIZES[0]:
-                    import academictorrents as at
-                    atpath = at.get(self.AT_HASH, datastore=self.root)
-                    assert atpath == path
+                # if not os.path.exists(path) or not os.path.getsize(path)==self.SIZES[0]:
+                    # import academictorrents as at
+                    # atpath = at.get(self.AT_HASH, datastore=self.root)
+                    # assert atpath == path
 
                 print("Extracting {} to {}".format(path, datadir))
                 os.makedirs(datadir, exist_ok=True)
